@@ -1,0 +1,19 @@
+.header {
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+
+    .navbar {
+        .nav-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .link {
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+}
