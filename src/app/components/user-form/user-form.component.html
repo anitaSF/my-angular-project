@@ -1,0 +1,19 @@
+<form (submit)="handleLogin($event)">
+    <fieldset>
+        <label for="username">USERNAME </label>
+        <input type="text" name="username" id="username" [(ngModel)]="user.userName">
+    </fieldset>
+    <fieldset>
+        <label for="email">EMAIL </label>
+        <input type="email" name="email" id="email" [(ngModel)]="user.email">
+    </fieldset>
+    <fieldset>
+        <label for="pass">PASSWORD </label>
+        <input type="password" name="pass" id="pass" [(ngModel)]="user.password">
+    </fieldset>
+    <button>Login</button>
+</form>
+
+<!-- Cada elemento input del formulario tiene un [(ngModel)] para vincularse con una variable definida en el .ts y modificar su valor con el introducido por el usuario en cada campo. 
+    Para que funcione este modelo ngModel se debe importar en su archivo .ts del componente (FormsModel)
+    De esta forma se pueden recoger los datos de los formularios en las web mediante el método definido para el evento "submit" -->

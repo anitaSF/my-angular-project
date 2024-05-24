@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Modulo para trabajar con elementos de formulario y activar sus funcionalidades. Importar también en @Component ((imports))
 import { HeaderComponent } from './components/header/header.component';
-import Project from './models/project';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, FormsModule, HeaderComponent, ProjectCardComponent, UserFormComponent, ProjectListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,20 +20,18 @@ export class AppComponent {
   personName: string;
   personAge: number;
   isFromMadrid: boolean;
-  cande: Project;
+  inputPlaceholder: string;
 
   constructor() {
     this.personName = 'Ana';
     this.personAge = 37;
     this.isFromMadrid = false;
+    this.inputPlaceholder = 'Nombre de usuario';
+  }
 
-    this.cande = {
-      id: 1,
-      name: 'Cande Shop',
-      category: 'Web Design - Ecommerce',
-      year: 2020,
-      image: 'https://payload.cargocollective.com/1/17/547114/11639379/ZonaK-cande-web-responsive_1250.jpg',
-      isPublic: true
-    }
+  // Metodos para modificar valores de variables creadas mediante eventos que se definen en los elementos html. En este caso dar nuevo valor a la variable "personName", en concreto valor vacío para limpiarlo.
+  // Los metodos que no devuelven nada deben llevar el argumento ":void"
+  cleanPersonName(): void {
+    this.personName = "";
   }
 }

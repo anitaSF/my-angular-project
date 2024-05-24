@@ -1,6 +1,19 @@
 <app-header></app-header>
 
-<div [id]="cande.id">
-    <h2> {{ cande.name }} </h2>
-    <img [src]="cande.image" alt="" class="project-img">
-</div>
+<app-project-card></app-project-card>
+
+<app-project-list></app-project-list>
+
+<button>Ver Proyecto</button>
+<br><br><br>
+
+<app-user-form></app-user-form>
+
+<br><br><br>
+
+<!-- @if (isFromMadrid) {
+Personas de Madrid:
+<h2> {{ personName }} </h2>
+} else {
+<p>No hay personas de Madrid</p>
+} -->
