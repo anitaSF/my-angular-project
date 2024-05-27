@@ -1,6 +1,12 @@
 <h2>PROJECTS</h2>
 
-@for (project of projects; track $index) {
-<h2>{{ project.name }}</h2>
-<h5>{{ project.category }} </h5>
-}
+<ul class="project-list">
+    @for (project of projects; track project.id) {
+    <li>
+        <app-project-card [project]="project"></app-project-card>
+        <!-- Utilizamos directamente el componente app-project-card para mostrar todas las propiedades de un objeto ya definidas en html y css de este componente, y no tener que repetirlas en este componente de nuevo
+        Para ello necesitamos llamar a la variable creada en el elemento hijo como propiedad del elemento html [variable]="variable" -->
+    </li>
+    }
+</ul>
+<!-- Para sacar un listado de items utilizamos el elemento html lista con un bucle "for" sobre un array de objetos definido en el archivo .ts del componente -->

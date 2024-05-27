@@ -1,0 +1,18 @@
+<!-- Cada elemento input del formulario tiene un [(ngModel)] para vincularse con una variable definida en el .ts y modificar su valor con el introducido por el usuario en cada campo. 
+    Para que funcione este modelo ngModel se debe importar en su archivo .ts del componente (FormsModel)
+    De esta forma se pueden recoger los datos de los formularios en las web mediante el método definido para el evento "submit" -->
+
+<input type="text" [(ngModel)]="personName">
+<h2> {{personName}} </h2>
+
+<button (click)="cleanPersonName()">Limpiar campo</button>
+
+<!-- Los condicionales se crean igual que en Js con if - else, añadiendo "@" delante. Para mostrar cierto codigo o no -->
+@if (personName.length > 10) {
+<p>
+    <strong></strong>El nombre de la persona es largo
+</p>
+} @else if (personName.length < 3) { <p><strong>El nombre de la persona es corto</strong></p>
+    } @else {
+    <p><strong>El nombre de la persona es normal</strong></p>
+    }

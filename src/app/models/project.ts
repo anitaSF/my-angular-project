@@ -7,6 +7,5 @@ export default interface Project {
     name: string,
     category: string,
     year: number,
-    image: string,
-    isPublic: boolean
+    image: string
 }

@@ -1,19 +1,23 @@
 <app-header></app-header>
 
+<br><br><br>
+<p>> Person form</p>
+<app-person></app-person>
+
+<p>> Ficha de proyecto</p>
 <app-project-card></app-project-card>
-
-<app-project-list></app-project-list>
-
 <button>Ver Proyecto</button>
 <br><br><br>
 
-<app-user-form></app-user-form>
+<p>> Lista de proyectos</p>
+<label for="show-products">Mostrar lista de Proyectos </label>
+<input type="checkbox" name="show-products" id="show-products" [(ngModel)]="showProducts">
+@if (showProducts) {
+<app-project-list></app-project-list>
+}
+<!-- Se crea un input checkbox asociado a la variable boolean "showProduct" mediante el "FormsModule", y con un condicional, si esta marcado se mostraran (porque se cumple la condicion true), si no se marca, se ocultan (porque no se cumple)-->
 
 <br><br><br>
 
-<!-- @if (isFromMadrid) {
-Personas de Madrid:
-<h2> {{ personName }} </h2>
-} else {
-<p>No hay personas de Madrid</p>
-} -->
+<p>> Formulario Login User</p>
+<app-user-form></app-user-form>
