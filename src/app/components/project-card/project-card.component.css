@@ -17,7 +17,7 @@
         height: auto;
     }
 
-    .website:not(.isPublic) {
+    a:not(.website) {
         display: none;
     }
 

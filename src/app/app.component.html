@@ -1,5 +1,10 @@
 <app-header></app-header>
 
+@if (username) {
+<h3>El usuario {{ username }} ha sido logado</h3>
+}
+
+
 <br><br><br>
 <p>> Person form</p>
 <app-person></app-person>
@@ -7,15 +12,15 @@
 
 <p>> Ficha de proyecto</p>
 <div class="project-card-home">
-<app-project-card></app-project-card>
-<button>Ver Proyecto</button>
+    <app-project-card></app-project-card>
+    <button>Ver Proyecto</button>
 </div>
 <br><br><br>
 
 <p>> Lista de proyectos</p>
-<label for="show-products">Mostrar lista de Proyectos </label>
-<input type="checkbox" name="show-products" id="show-products" [(ngModel)]="showProducts">
-@if (showProducts) {
+<label for="show-projects">Mostrar lista de Proyectos </label>
+<input type="checkbox" name="show-projects" id="show-projects" [(ngModel)]="showProjects">
+@if (showProjects) {
 <app-project-list></app-project-list>
 }
 <!-- Se crea un input checkbox asociado a la variable boolean "showProduct" mediante el "FormsModule", y con un condicional, si esta marcado se mostraran (porque se cumple la condicion true), si no se marca, se ocultan (porque no se cumple)-->
@@ -23,4 +28,5 @@
 <br><br><br>
 
 <p>> Formulario Login User</p>
-<app-user-form></app-user-form>
+<app-user-form (login)="login($event)"></app-user-form>
+<!-- Se llama al evento (login) para que muestre la información traida desde el componente hijo (en este caso muestra la varible user.username en el <h3> insertado debajo del <header>) -->

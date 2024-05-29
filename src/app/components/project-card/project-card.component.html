@@ -6,3 +6,8 @@
 </div>
 <!-- Para utilizar una variable definida en el .ts de un componente, se llama en el html entre doble llave {{ }}
 Para utilizar la propiedad de una variable objeto como atributo de un elemento html, se define el atributo corchetes []  y se iguala a la propiedad entre comillas "": [atributo]="variable.propiedad" -->
+
+<!-- Para definir en html el método de ángular [ngclass], se debe igualar a la clase css que cogería el elemento html y a la variable que se debe cumplir para que la coja [ngClass]="{ class: variable}" 
+
+    En este caso se le aplica la clase ".website" a los elementos <a> que tengan el valor de la variable "project.isPublic" true. Para este ejemplo, se ha negado la class css (a:not (.website) {display: none}) por lo que el resultado es la inversa. Se oculta 
+-->

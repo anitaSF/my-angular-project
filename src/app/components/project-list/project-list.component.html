@@ -5,8 +5,8 @@
     @for (project of projects; track project.id) {
     <li>
         <app-project-card [project]="project"></app-project-card>
-        <!-- Utilizamos directamente el componente app-project-card para mostrar todas las propiedades de un objeto ya definidas en html y css de este componente, y no tener que repetirlas en este componente de nuevo
-        Para ello necesitamos llamar a la variable creada en el elemento hijo como propiedad del elemento html [variable]="variable" -->
+        <!-- Se puede utilizar directamente el componente app-project-card para mostrar todas las propiedades de un objeto definidas en html y css de este componente hijo.
+        Para ello, se llamar a la variable creada en el elemento hijo como propiedad del elemento html [variable]="variable". El nombre de esta propiedad y su valor es el mismo nombre de la variable creada en el elemento hijo. -->
     </li>
     }
 </ul>

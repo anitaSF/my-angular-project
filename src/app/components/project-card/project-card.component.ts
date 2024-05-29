@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'; // Añadir "Input" para que funcione el método "@Input()" definido abajo con la variable array "project"
 
-import { NgClass } from '@angular/common';
+import { NgClass } from '@angular/common'; // Importar "NgClass" para poder utilizar las clases dinámicas en el html, y que un elemento coja el estilo dado en una clase css cuando una variable tenga "x" valor
 import Project from '../../models/Project';
 
 
