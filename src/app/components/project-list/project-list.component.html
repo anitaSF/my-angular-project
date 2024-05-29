@@ -1,6 +1,7 @@
 <h2>PROJECTS</h2>
 
 <ul class="project-list">
+    <!-- Para renderizar listas se utiliza en bucle "for" que tirará de la información incluida en un array (definido en su .ts o importado de una API). En este caso tira del array "projects": por cada "project" del array "projects" {codigo a ejectutar} (mostrar el componente app-project-card)) -->
     @for (project of projects; track project.id) {
     <li>
         <app-project-card [project]="project"></app-project-card>

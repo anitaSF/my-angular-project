@@ -1,3 +1,6 @@
+<!-- Los formularios llevan asociados eventos de tipo "submit" que tenemos que definir (definimos el codigo a ejecutar cuando se activa el evento) en el archivo .ts asociado al componente. 
+    Entre paréntesis se debe llamar al evento "($event)" para que se ejecute el método "preventDefault" y no se recargue automáticamente la página al enviar -->
+
 <form (submit)="handleLogin($event)">
     <fieldset>
         <label for="username">USERNAME </label>

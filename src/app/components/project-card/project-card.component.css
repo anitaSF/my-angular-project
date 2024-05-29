@@ -3,10 +3,22 @@
     flex-direction: column;
     align-items: center;
     background-color: #ececec;
+    padding-bottom: 20px;
+
+    a {
+        text-decoration: none;
+        color: palevioletred;
+        font-weight: bold;
+        font-size: 12px;
+    }
 
     .project-img {
-        width: 90%;
+        max-width: 90%;
         height: auto;
+    }
+
+    .website:not(.isPublic) {
+        display: none;
     }
 
 }

@@ -1,4 +1,5 @@
-<header class="header">
+<header class="header" [ngClass]="{ dark: isDark }">
+    <!-- Clase condicional [ngClass] aplicada sobre el elemento <header>. Si la variable "isDark: true" se activará la clase "dark" definida en el .css del componente, y si la variable "isDark: false" no se aplica -->
     <h1 class="title">
         <img src="../../../assets/logo.png" alt="logotipo">
     </h1>
@@ -9,6 +10,16 @@
             <li><a class="link" href="#">Blog</a></li>
             <li><a class="link" href="#">News</a></li>
             <li><a class="link" href="#">Contact Us</a></li>
+            <li>
+                @if (isDark) {
+                <span class="btn-dark" (click)="toggleDark()">☀️</span>
+                } @else {
+                <span class="btn-dark" (click)="toggleDark()">🌙</span>
+                }
+            </li>
+            <!-- Elemento creado para convertir el header a modo oscuro definido en el css del componente (coge fondo negro)
+            El evento click llama al método "toggleDark" definido en el .ts del componente que cambia el valor de la variable "isDark", de la cual depende la [ngClass]="{ dark: isDark }" -->
         </ul>
+
     </nav>
 </header>

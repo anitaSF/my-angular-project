@@ -3,22 +3,31 @@
     color: white;
     text-align: center;
     padding: 2px 0;
+}
 
-    .title img {
-        width: 175px;
-        height: auto;
+.dark {
+    background-color: black;
+}
+
+.btn-dark {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.title img {
+    width: 175px;
+    height: auto;
+}
+
+.navbar {
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
     }
 
-    .navbar {
-        .nav-list {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .link {
-            color: white;
-            text-decoration: none;
-        }
-
+    .link {
+        color: white;
+        text-decoration: none;
     }
+
 }

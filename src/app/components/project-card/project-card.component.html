@@ -2,6 +2,7 @@
     <h2> {{ project.name }} </h2>
     <img [src]="project.image" alt="" class="project-img">
     <h5> {{ project.category }} </h5>
+    <a [href]="project.url" [ngClass]="{ website: project.isPublic}" target="_blank">Ir a website ></a>
 </div>
 <!-- Para utilizar una variable definida en el .ts de un componente, se llama en el html entre doble llave {{ }}
 Para utilizar la propiedad de una variable objeto como atributo de un elemento html, se define el atributo corchetes []  y se iguala a la propiedad entre comillas "": [atributo]="variable.propiedad" -->
