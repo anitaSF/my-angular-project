@@ -34,7 +34,7 @@ export class UserFormComponent {
 
     if (this.user.password === pass) {
       console.log('El usuario ha hecho login: ', this.user);
-      this.login.emit(this.user); // Se crea el evento que define la información a exportar al componente padre (variable array "User") con el evento "submit" definido para el formulario. Sino es un formulario se creará otro evento tipo "click" o de otro tipo.
+      this.login.emit(this.user); // Se crea el evento (por defecto "this.variable.emit(info_exportar) ") que define la información a exportar (indicada entre paréntesis) al componente padre (variable array "User") con el evento "submit" definido para el formulario. Sino es un formulario se creará otro evento tipo "click" o de otro tipo.
     } else {
       console.log('Ha introducido contraseña errónea');
     }

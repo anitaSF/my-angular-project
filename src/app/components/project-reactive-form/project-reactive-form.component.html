@@ -1,0 +1,24 @@
+<h4>Crear Nuevo Proyecto</h4>
+
+<form (submit)="handleSubmit()" [formGroup]="newProjectForm">
+    <fieldset>
+        <label for="project-name">Nombre del Proyecto </label>
+        <input type="text" id="project-name" name="project-name" formControlName="name" />
+        <!-- Cada imput se relaciona con la variable correspondiente creada en el .ts con el atributo formControlName="variable"-->
+    </fieldset>
+    <fieldset>
+        <label for="project-category">Categoría </label>
+        <input type="text" id="project-category" name="project-category" formControlName="category">
+
+        <label class="input-margin" for="project-year">Año </label>
+        <input type="number" id="project-year" name="project-year" formControlName="year" />
+    </fieldset>
+    <fieldset>
+        <label for="project-img">Imagen del Proyecto (desde url) </label>
+        <input type="text" id="project-img" name="project-img" formControlName="image" />
+    </fieldset>
+
+    <button [disabled]="newProjectForm.invalid">Crear Proyecto</button>
+    <!-- Para que no se pueda enviar el formulario si no se rellenan los campos requeridos o se rellenan con valor no válido, se deble añadir el atributo [disabled]="nombre_formulario.invalid". De esta forma el botón se mostrará deshabilitado hasta que se rellene el formulario correctamente -->
+
+</form>

@@ -7,11 +7,12 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { PersonComponent } from './components/person/person.component';
 import User from './models/User';
+import { ProjectReactiveFormComponent } from './components/project-reactive-form/project-reactive-form.component'; // Se deben importar todos los componentes hijo que se quieren mostrar en la página padre principal. Tambien importar en @Component({imports:})
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, HeaderComponent, UserFormComponent, ProjectCardComponent, ProjectListComponent, PersonComponent],
+  imports: [RouterOutlet, FormsModule, HeaderComponent, UserFormComponent, ProjectCardComponent, ProjectListComponent, PersonComponent, ProjectReactiveFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
